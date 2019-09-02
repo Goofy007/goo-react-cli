@@ -1,0 +1,23 @@
+{
+  "name": "goo-react-cli",
+  "version": "1.0.0",
+  "description": "react cli 工具",
+  "main": "index.js",
+  "bin": {
+    "goo-react-cli": "./bin/www"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Goofy007/goo-react-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Goofy007/goo-react-cli/issues"
+  },
+  "homepage": "https://github.com/Goofy007/goo-react-cli#readme"
+}
