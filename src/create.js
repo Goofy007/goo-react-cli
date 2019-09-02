@@ -1,13 +1,15 @@
 // create 所有的逻辑
 
 // https://api.github.com/users/goofyrepo/repos 仓库地址
-
+const path = require('path');
 const axios = require('axios');
 const ora = require('ora');
 const inquirer = require('inquirer');
 const { promisify } = require('util');
 let downLoadGitRepo = require('download-git-repo');
+let ncp = require('ncp');
 
+ncp = promisify(ncp);
 downLoadGitRepo = promisify(downLoadGitRepo);
 const { downloadDir } = require('./constants');
 
@@ -54,8 +56,7 @@ module.exports = async (projectName) => {
   const resl = await download(repo);
   console.log('dir', resl);
 
-  // 简单文件直接拷贝
-
-
+  // 简单文件直接拷贝到当前目标
+  ncp(resl, path.resolve(projectName));
   // 复杂模版渲染 渲染后拷贝
 };
