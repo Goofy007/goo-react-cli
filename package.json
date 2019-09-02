@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/Goofy007/goo-react-cli/issues"
   },
-  "homepage": "https://github.com/Goofy007/goo-react-cli#readme"
+  "homepage": "https://github.com/Goofy007/goo-react-cli#readme",
+  "dependencies": {
+    "commander": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
 }
