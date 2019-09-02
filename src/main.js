@@ -1,6 +1,7 @@
 
 // 1) 解析用户的参数
 const program = require('commander');
+const path = require('path');
 
 const mapActions = {
   create: {
@@ -27,6 +28,11 @@ Reflect.ownKeys(mapActions).forEach((action) => {
         console.log(mapActions[action].description);
       } else {
         console.log(action);
+        if (action === 'create') {
+          // create <projectName>
+          console.log('argvs', process.argv);
+          require(path.resolve(__dirname, action))(...process.argv.slice(3));
+        }
       }
     });
 });
